@@ -1,0 +1,34 @@
+{
+  "name": "presence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SivakCR/presence.git"
+  },
+  "keywords": [
+    "google",
+    "classroom",
+    "attendance",
+    "real",
+    "time"
+  ],
+  "author": "Sivakesh C R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SivakCR/presence/issues"
+  },
+  "homepage": "https://github.com/SivakCR/presence#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "firebase": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "selenium-webdriver": "^4.0.0-alpha.8"
+  }
+}
