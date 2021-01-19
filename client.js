@@ -16,6 +16,9 @@ function Tester () {
             j[x[i].innerText][ j[x[i].innerText]['l'] ] = b ;
             j[x[i].innerText]['f'] = b ;
         }
+        else if ( j[x[i].innerText][ j[x[i].innerText]['l'] ] === b ){
+            continue;
+        }
         else {
             j[x[i].innerText][ b ] = b ;
             j[x[i].innerText]['l'] = b ;
@@ -35,7 +38,4 @@ function Tester () {
         },
         body: data
     }) 
-
 }
-
-

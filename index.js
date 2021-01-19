@@ -23,11 +23,24 @@ app.all  ('*', (req, res) => {
     var jsn = JSON.parse(v)
     var data = jsn['data']
     var id = jsn['id']
+    
+    var tot = 0 
+    for (s in data) { 
+        for ( b in data[s] ) {
+            tot = 0
+            if(b!=='l' && b!=='f' ){
+                tot = data[s][b] - parseInt(b)
+                data[s]['t']=tot
+            }
+        }
+    }
+
     db.collection('class').doc(id).collection('class').add({
         data: JSON.stringify(data),
         time: firebase.firestore.FieldValue.serverTimestamp()
     });
-    console.log(JSON.parse(v) ,data , id)
+
+    console.log('********',data,'********',id)
     res.send('cors problem fixed')
 })
 
